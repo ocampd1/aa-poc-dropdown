@@ -1,0 +1,19 @@
+<div ng-app="myApp.view1" ng-controller="View1Ctrl">
+    <label>Topics:</label>
+    <span>
+        <select ng-change="selectedRow(selectedTopic)" ng-model="selectedTopic">
+            <option value="{{t.value}}" ng-repeat="t in topics">{{t.name}}</option>
+        </select>
+    </span>
+    <span><select ng-change="subjectChoice(selectedSubject)" ng-model="selectedSubject" >
+            <option value="{{s.name}}" ng-repeat="s in subjects">{{s.name}}</option>
+        </select></span>
+    <div>
+        <label>Results</label>
+        <span>
+           Selected Topic = {{selectedTopic}}
+            <br>
+            Selected Subject = {{selectedSubject}}
+        </span>
+    </div>
+</div>
